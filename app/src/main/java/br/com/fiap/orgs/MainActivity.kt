@@ -20,8 +20,8 @@ class MainActivity : Activity(){
         setContentView(R.layout.activity_main)
 
         /** Binding: Processo de vincular o código fonte de um programa com o arquivo de layout correspondente.
-            TextView:(componente usado para exibir texto em um app Android).
-            Id:(identificador usado para identificar elementos em um app).*/
+            TextView:componente usado para exibir texto em um app Android.
+            Id:identificador usado para identificar elementos em um app.*/
 
         /** Encontra o TextView com o ID "nome" no layout e atribui à variável "nome" ao título do item.*/
         val nome: TextView = findViewById(R.id.nome)
