@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+//Define um layout que preenche toda a largura disponível seguindo o conteúdo interno e define também namespaces para acessar atributos padrão para o android
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+//O arquivo XML cria um layout para exibir informações sobre a cesta de frutas
+
+//Esse TextView serve para exibir um texto que é o nome do item
+    <TextView
+//Define o ID "nome" para o TextView
+        android:id="@+id/nome"
+//Indica a largura do TextView e permite uma adaptaão flexível do layout para diferentes dispositivos
+        android:layout_width="0dp"
+//Define a altura do TextView dentro do layout para que seja ajustado dinamicante e tenha a altura precisa para mostrar o conteúdo por inteiro
+        android:layout_height="wrap_content"
+//Define margens de 16dp para os quatro lados do TextView de maneira a proporcionar um espaço entre o TextView e as bordas do container pai
+        android:layout_margin="16dp"
+//Define o tamanho da fonte para 18sp
+        android:textSize="18sp"
+//Define uma restrição para o layout que prende a extremidade final do TextView ao final do container pai
+        app:layout_constraintEnd_toEndOf="parent"
+//Define uma restrição para o layout que prende a extremidade inicial do TextView ao inicio do container pai
+        app:layout_constraintStart_toStartOf="parent"
+//Define uma restrição para o layout que prende o topo do TextView ao topo do container pai
+        app:layout_constraintTop_toTopOf="parent"
+//Define o texto que será exibido
+        tools:text="Cesta de frutas" />
+
+//Esse TextView serve para exibir um texto referente às frutas que estão na cesta
+    <TextView
+        android:id="@+id/descricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+//Define uma restrição para o layout que prende o topo do TextView com ID descricao à parte inferior  do TextView com ID nome
+        app:layout_constraintTop_toBottomOf="@id/nome"
+        tools:text="Laranja, manga e uva" />
+
+//Esse TextView serve para exibir um texto referente ao preço final da cesta
+    <TextView
+        android:id="@+id/valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descricao"
+        tools:text="19.99" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

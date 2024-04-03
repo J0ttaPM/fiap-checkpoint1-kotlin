@@ -1,0 +1,30 @@
+/**
+Um arquivo escrito em XML o qual tem a função de definir o layout da tela no Android.
+dentro desse codigo temos o ConstraintLayout, o qual permite posicionar os elementos de forma flexivel e responsiva. Juntamente com o recycleView que está exibindo uma lista de produtos
+*/
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+// Width é para definir a largura e o "match_parent" faz com que o container ocupe toda a largura disponivel do seu "pai"
+    android:layout_width="match_parent"
+// Height é para definir a altura e o "match_parent" faz com que o elemento ocupe toda a altura disponivel do seu "pai"
+    android:layout_height="match_parent">
+
+// RecyclerView exibe a lista de produtos 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+// Define que a parte inferior do RecyclerView está alinhada com a parte inferior do layout pai.
+        app:layout_constraintBottom_toBottomOf="parent"
+// Define que a extremidade direita do RecyclerView está alinhada com a extremidade direita do layout pai.
+        app:layout_constraintEnd_toEndOf="parent"
+// Define que a extremidade esquerda do RecyclerView está alinhada com a extremidade esquerda do layout pai.
+        app:layout_constraintStart_toStartOf="parent"
+// Define que a parte superior do RecyclerView está alinhada com a parte superior do layout pai.
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/produto_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
