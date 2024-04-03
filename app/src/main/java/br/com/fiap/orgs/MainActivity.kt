@@ -23,15 +23,15 @@ class MainActivity : Activity(){
             TextView:componente usado para exibir texto em um app Android.
             Id:identificador usado para identificar elementos em um app.*/
 
-        /** Encontra o TextView com o ID "nome" no layout e atribui à variável "nome" ao título do item.*/
+        /** Encontrar o TextView com o ID "nome" no layout e atribuir ao título do item a variável "nome".*/
         val nome: TextView = findViewById(R.id.nome)
         nome.text = "Cesta De Frutas"
 
-        /** Encontra o TextView com o ID "descricao" no layout e atribui à variável "descricao" as frutas que estão na cesta.*/
+        /** Encontrar o TextView com o nome "descricao" no layout e atribuir à variável "descricao" as frutas da cesta.*/
         val descricao: TextView = findViewById(R.id.descricao)
         descricao.text = "Laranja, Manga e Uva"
 
-        /** Encontra o TextView com o ID "valor" no layout e atribui à variável "valor" o preço final dos itens na cesta.*/
+        /** Encontra o TextView com o ID "valor" no layout e atribui à variável "valor" o preço final dos produtos na cesta.*/
         val valor: TextView = findViewById(R.id.valor)
         valor.text = "19.99"
 
